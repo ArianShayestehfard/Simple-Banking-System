@@ -10,7 +10,7 @@ public class BankingSystem{
         public static void main(String[] args) {
             while (true) {
                 System.out.println(
-                        "\nOpen a Bank Account :(1)" +
+                                "\nOpen a Bank Account :(1)" +
                                 "\nDeposit money :(2)" +
                                 "\nWithdraw money :(3)" +
                                 "\nView Account balance :(4)" +
@@ -51,7 +51,7 @@ public class BankingSystem{
             System.out.println("Enter account name:");
             String name = scanner.nextLine();
 
-            System.out.println("Enter password:");
+            System.out.println("Enter password (4 Digits):");
             int password = scanner.nextInt();
             scanner.nextLine();
 

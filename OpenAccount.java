@@ -44,7 +44,7 @@ public class OpenAccount {
 
     public void display() {
         System.out.println(
-                "Account Name: " + accountName +
+                        "Account Name: " + accountName +
                         "\nAccount Number: " + accountNumber +
                         "\nAccount Balance: " + balance);
     }
