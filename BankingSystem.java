@@ -78,7 +78,7 @@ public class BankingSystem{
 
             System.out.println("Enter account number:");
             int accountNumber = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             OpenAccount account = findAccount(accountNumber);
             if (account == null) {
@@ -107,7 +107,7 @@ public class BankingSystem{
 
             System.out.println("Enter account number:");
             int accountNumber = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             OpenAccount account = findAccount(accountNumber);
             if (account == null) {
@@ -139,7 +139,7 @@ public class BankingSystem{
 
             System.out.println("Enter account number:");
             int accountNumber = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             OpenAccount account = findAccount(accountNumber);
             if (account == null) {
