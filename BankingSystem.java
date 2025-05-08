@@ -191,6 +191,7 @@ public class BankingSystem {
 
         if (account.getPassword() == password) {
             account.display();
+
         } else {
             System.out.println("Invalid credentials");
         }

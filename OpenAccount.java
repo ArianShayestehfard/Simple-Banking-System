@@ -1,10 +1,10 @@
 public class OpenAccount {
-
     private String accountName;
     private int accountNumber;
     private int password;
     private double balanceRial;
     private double balanceDollar;
+    private static final double ExchangeRate = 100;
 
     public OpenAccount(String accountName, int password, int accountNumber) {
         this.accountName = accountName;
@@ -34,19 +34,26 @@ public class OpenAccount {
         return balanceDollar;
     }
 
+    public double getTBalanceDollar() {
+        return balanceDollar + (balanceRial / ExchangeRate);
+    }
+
+    public double getTBalanceRial() {
+        return balanceRial + (balanceDollar * ExchangeRate);
+    }
+
     public void depositRial(double amount) {
-        if (amount > 0)  {
+        if (amount > 0) {
             balanceRial += amount;
-        }
-        else {
+        } else {
             System.out.println("Amount must be greater than zero.");
         }
     }
 
     public void depositDollar(double amount) {
         if (amount > 0) {
-        balanceDollar += amount;}
-        else {
+            balanceDollar += amount;
+        } else {
             System.out.println("Amount must be greater than zero.");
         }
     }
@@ -71,7 +78,9 @@ public class OpenAccount {
         System.out.println(
                 "Account Name: " + accountName +
                         "\nAccount Number: " + accountNumber +
-                        "\nAccount Balance in Rial: " + balanceRial +
-                        "\nAccount Balance in USD: " + "$" + balanceDollar);
+                        "\nRial Account Balance: " + balanceRial +
+                        "\nUSD Account Balance: " + "$" + balanceDollar +
+                        "\nTotal Account Balance in Rial: " + getTBalanceRial() +
+                        "\nTotal Account Balance in USD: " + "$" + getTBalanceDollar());
     }
 }
